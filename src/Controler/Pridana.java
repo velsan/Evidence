@@ -10,6 +10,6 @@ package Controler;
  */
 public class Pridana {
     Pridana() {
-        System.out.println("sap?");
+        //System.out.println("sap?");
     }
 }
