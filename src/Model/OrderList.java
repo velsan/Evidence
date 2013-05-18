@@ -22,7 +22,6 @@ public class OrderList {
     public AutorCompare getAutorCompare() {
         return autor;
     }
-
     public NameCompare getNameCompare() {
         return nazev;
     }
