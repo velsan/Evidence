@@ -41,6 +41,6 @@ public class LoadDBTables {
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(frame, "Error while accessing Database", "Error", JOptionPane.ERROR_MESSAGE);
-        } 
+        }
     }
 }
