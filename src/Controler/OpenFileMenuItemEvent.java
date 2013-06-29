@@ -36,6 +36,7 @@ public class OpenFileMenuItemEvent implements ActionListener {
                 ModifiedFileVariable.setFile(true);
                 ModifiedFileVariable.setDb(false);
                 ModifiedFileVariable.FileWasSaved();
+                Soubor.setLoaded(true);
             } else {
                 JOptionPane.showMessageDialog(Frame.getInstance(), " File format must be *.evd", "Error while opening file!", JOptionPane.ERROR_MESSAGE);
             }

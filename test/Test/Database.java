@@ -1,9 +1,7 @@
 package Test;
 
 import Model.Database.LoadDBTables;
-import View.Frame;
 import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
@@ -12,7 +10,6 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 
 /**
  *

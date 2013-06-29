@@ -55,6 +55,9 @@ public class NewTableMenuItemEvent implements ActionListener {
             JOptionPane.showMessageDialog(Frame.getInstance(), "Program will be terminated!", "Error while creating Table!", JOptionPane.ERROR_MESSAGE);
             System.exit(1);
         }
+        catch (NullPointerException ex) {
+                
+            }
 
     }
 }

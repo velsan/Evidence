@@ -19,8 +19,12 @@ public class SaveFileMenuItemEvent implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        save.saveFile();
-        ModifiedFileVariable.FileWasSaved();
-        JOptionPane.showMessageDialog(Frame.getInstance(), "File " + Soubor.getInstance().getName() + " was saved", "Saving was successful!", JOptionPane.INFORMATION_MESSAGE);
+        if (Soubor.isLoaded()) {
+            save.saveFile();
+            ModifiedFileVariable.FileWasSaved();
+            JOptionPane.showMessageDialog(Frame.getInstance(), "File " + Soubor.getInstance().getName() + " was saved", "Saving was successful!", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(Frame.getInstance(), "NO File is loaded!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 }

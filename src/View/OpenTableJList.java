@@ -13,7 +13,7 @@ import javax.swing.JScrollPane;
 
 /**
  * Tato třída slouží pro reprezentaci JListu, jež bude sloužit obdobně jako
- * JFileChooser akorát pro tabulky v databázy
+ * JFileChooser akorát pro tabulky v databázi
  *
  * @author Suchý Vojtěch
  */

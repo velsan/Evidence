@@ -11,6 +11,15 @@ import java.io.File;
 public class Soubor {
 
     private static File Singleton = null;
+    private static boolean Loaded = false;
+
+    public static boolean isLoaded() {
+        return Loaded;
+    }
+
+    public static void setLoaded(boolean Loaded) {
+        Soubor.Loaded = Loaded;
+    }
     /*TO DO - po testování změnit name na null
      * Pak také musim změnit metodu main() a nevolatmetodu nacti()
      * Kdyý bude name null a já nebudu volat raadListFormFile, tak se mi chyba nevyhodí nikdy
@@ -25,7 +34,7 @@ public class Soubor {
         if (Singleton == null) {
             Singleton = new File(name);
             return Singleton;
-            
+
         } else {
             return Singleton;
         }
