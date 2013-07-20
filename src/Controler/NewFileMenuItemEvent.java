@@ -41,17 +41,17 @@ public class NewFileMenuItemEvent implements ActionListener {
     private void createFile() {
         try {
             //Cesta do working directory
-            file = new File(System.getProperty("user.dir") + "\\" + s + ".evd");
+            file = new File(System.getProperty("user.dir") + "\\" + s + ".xml");
             file.createNewFile();
             JOptionPane.showMessageDialog(Frame.getInstance(), "File " + s + " was created", "Creating file was successful!", JOptionPane.INFORMATION_MESSAGE);
 
             //naplnění seznamu a jeho vypsání na obrazovku
-            Soubor.setName(s + ".evd");
+            Soubor.setName(s + ".xml");
             nacti.naplnSeznam();
             vypis.vypis();
+            Soubor.setLoaded(true);
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(Frame.getInstance(), "Program will be terminated!", "Error while creating file!", JOptionPane.ERROR_MESSAGE);
-            System.exit(1);
+            JOptionPane.showMessageDialog(Frame.getInstance(), "File "+s+".xml was NOT created", "Error while creating file!", JOptionPane.ERROR_MESSAGE);
         }
     }
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+<book>
+<name>Bila nemoc</name>
+<autor>Capek K.</autor>
+<date>2003</date>
+</book>
+<book>
+<name>Mafie v Praze</name>
+<autor>Viewegh M.</autor>
+<date>2011</date>
+</book>
+<book>
+<name>Proces</name>
+<autor>Kafka F.</autor>
+<date>2008</date>
+</book>
+<book>
+<name>Dlouha noc</name>
+<autor>Nemcova B.</autor>
+<date>1995</date>
+</book>
+<book>
+<name>Audience</name>
+<autor>Havel V.</autor>
+<date>1985</date>
+</book>
+<book>
+<name>Na vlnach TSF</name>
+<autor>Saifert J.</autor>
+<date>2002</date>
+</book>
+</root>

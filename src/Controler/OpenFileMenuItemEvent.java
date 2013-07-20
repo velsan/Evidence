@@ -29,7 +29,7 @@ public class OpenFileMenuItemEvent implements ActionListener {
         if (value == JFileChooser.APPROVE_OPTION) {
             String s = chooser.getSelectedFile().getAbsolutePath();
             String jmeno = chooser.getSelectedFile().getName();
-            if (jmeno.endsWith(".evd")) {
+            if (jmeno.endsWith(".xml")) {
                 Soubor.setName(s);
                 nacti.naplnSeznam();
                 vypis.vypis();
@@ -38,7 +38,7 @@ public class OpenFileMenuItemEvent implements ActionListener {
                 ModifiedFileVariable.FileWasSaved();
                 Soubor.setLoaded(true);
             } else {
-                JOptionPane.showMessageDialog(Frame.getInstance(), " File format must be *.evd", "Error while opening file!", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(Frame.getInstance(), " File format must be *.xml", "Error while opening file!", JOptionPane.ERROR_MESSAGE);
             }
         }
     }

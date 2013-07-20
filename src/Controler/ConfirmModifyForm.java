@@ -5,12 +5,14 @@ import Model.ModifiedFileVariable;
 import Model.ModifyButtonEdit;
 import Model.SeznamKnih;
 import Model.WriteList;
+import View.Frame;
 import View.MainJList;
 import View.ModifyForm;
 import View.UndoMenuItem;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.event.UndoableEditListener;
 import javax.swing.undo.UndoableEditSupport;
 
@@ -51,7 +53,13 @@ public class ConfirmModifyForm implements ActionListener {
         index = MainJList.getInstance().getSelectedIndex();
         seznam.get(index).setAutor(ModifyForm.tfAutor.getText());
         seznam.get(index).setNazev(ModifyForm.tfName.getText());
-        seznam.get(index).setVydano((ModifyForm.tfDate.getText()));
+        //ověření vstupu pro datum 
+        if ((ModifyForm.tfDate.getText().toString().matches("^\\d{0,4}?$"))) {
+            seznam.get(index).setVydano((ModifyForm.tfDate.getText()));
+        } else {
+            JOptionPane.showMessageDialog(Frame.getInstance(), "Date must be 0-4 digit number!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        //aktualizace výstupu na obrazovce
         vypis.vypis();
         ModifyForm.dialog.dispose();
         ModifiedFileVariable.FileWasModified();

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+    <book>
+        <name>1984</name>
+        <autor>Orwell G.</autor>
+        <date>2003</date>
+    </book>
+    <book>
+        <name>Hubene nohy a vsechno ostatni</name>
+        <autor>Robbins T.</autor>
+        <date>2002</date>
+    </book>
+    <book>
+        <name>Maly princ</name>
+        <autor>Exupery A.</autor>
+        <date>2005</date>
+    </book>
+    <book>
+        <name>Rozdelene Self</name>
+        <autor>Laing R.D.</autor>
+        <date>2001</date>
+    </book>
+    <book>
+        <name>Farma zvirat</name>
+        <autor>Orwell G.</autor>
+        <date>1985</date>
+    </book>
+</root>

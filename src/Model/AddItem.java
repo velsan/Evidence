@@ -47,9 +47,13 @@ public class AddItem {
             //nastavení data vydání knihy
             if (vydano.isEmpty()) {
                 kniha.setVydano("Nezadáno!");
-            } else {
+            } else if (vydano.toString().matches("^\\d{0,4}?$")){
                 kniha.setVydano(vydano);
+            } else {
+                JOptionPane.showMessageDialog(Frame.getInstance(), "Date must be 0-4 digit number!", "Error", JOptionPane.ERROR_MESSAGE);
+                kniha.setVydano("Nezadáno!");
             }
+            
 
             seznam.add(kniha);
             //nastavení instanční proměnné kniha

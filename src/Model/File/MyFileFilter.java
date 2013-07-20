@@ -16,17 +16,17 @@ public class MyFileFilter extends FileFilter {
      * Kontrola, zda má filtr zobrazit soubor z parametru
      *
      * @param file File the Filter is checking
-     * @return True if file ends with ".evd"
+     * @return True if file ends with ".xml"
      */
     @Override
     public boolean accept(File file) {
         String s = file.getName();
-        return (s.endsWith(".evd"));
+        return (s.endsWith(".xml"));
     }
 
     @Override
     public String getDescription() {
-        String popis = "Filtr zobrazí pouze soubory s koncovku *.evd";
+        String popis = "Filtr zobrazí pouze soubory s koncovku *.xml";
         return popis;
     }
 }
